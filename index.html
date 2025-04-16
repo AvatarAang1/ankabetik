@@ -1,0 +1,158 @@
+<html lang="tr">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+        import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyB3EVHoelP1NsIgPvN1ysNCVdzONJwWuDE",
+          authDomain: "ankabetik.firebaseapp.com",
+          projectId: "ankabetik",
+          storageBucket: "ankabetik.firebasestorage.app",
+          messagingSenderId: "10034574423",
+          appId: "1:10034574423:web:fbfe5e745913bf05b15f12",
+          measurementId: "G-E7CHKH5BYC"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        
+        window.firebaseStuff = {
+          auth,
+          createUserWithEmailAndPassword,
+          signInWithEmailAndPassword,
+          db,
+          collection,
+          addDoc,
+          getDocs
+        };
+    </script>
+    <script type="module" src="script.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ankabetik</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="menu-button" onclick="toggleMenu()">☰</div>
+    <h1 class="logo">Ankabetik</h1>
+  </header>
+  <body>
+  
+ 
+  </body>
+  
+
+  <nav class="sidebar hidden" id="menuBox" style="display: none;">
+    <ul>
+      <li><a href="#">Anasayfa</a></li>
+      <li><a href="ilaclar.html">İlaçlar</a></li>
+      <li><a href="beslenme.html">Beslenme</a></li>
+      <li><a href="motivasyon.html">Motivasyon</a></li>
+      <li><a href="topluluk.html">Topluluk</a></li>
+      <li><a href="kisiselbakim.html">Kişisel Bakım</a></li>
+      <li><a href="javascript:void(0)" onclick="toggleAuthBox()">Giriş / Kayıt</a></li>
+    </ul>
+  </nav>
+  
+  <div class="auth-box" id="authBox" style="display: none;">
+    <h2>Ankabetik'e Hoş Geldin 💖</h2>
+    <input type="email" id="emailInput" placeholder="Email adresin" required>
+    <input type="password" id="passwordInput" placeholder="Şifren" required>
+    <button onclick="login()">Giriş Yap</button>
+    <button onclick="register()">Kayıt Ol</button>
+    <p id="authMessage"></p>
+  </div>
+<!-- Giriş / Kayıt Kutusu -->
+<div id="authBox" style="display: none;">
+    <h3>Giriş / Kayıt</h3>
+    <input type="email" id="emailInput" placeholder="E-posta">
+    <input type="password" id="passwordInput" placeholder="Şifre">
+  
+    <!-- Kayıt bilgileri -->
+    <div id="registerExtra" style="display: none; margin-top: 10px;">
+      <input type="text" id="nameInput" placeholder="Adınız">
+      <input type="text" id="surnameInput" placeholder="Soyadınız">
+      <input type="date" id="birthInput" placeholder="Doğum Tarihi">
+      <input type="email" id="registerEmail" placeholder="E-posta">
+      <input type="password" id="registerPassword" placeholder="Şifre">
+      <button onclick="register()">Kayıt Ol</button>
+      
+    </div>
+  
+    <button onclick="login()">Giriş Yap</button>
+    <button onclick="toggleRegisterForm()">Kayıt Ol</button>
+    <button onclick="register()" id="registerBtn" style="display: none;">Kayıt Formunu Gönder</button>
+    <button onclick="register()">Kayıt Formunu Gönder</button>
+
+    <div id="authMessage"></div>
+  </div>
+  
+  <main>
+    <section class="card">
+      <h2>Hoş geldin!</h2>
+      <p>Şeker hastalığına dair kısa bir bilgilendirme yapalım.İnsülin adında bir hormonumuz var.Bu hormon eğer yeterli üretilmezse veya doğru kullanılamazsa kan şekeri düzeyimiz artar.Bu artışın oluşmasına şeker hastalığı diyoruz.</p>
+    </section>
+  </main>
+  <main>
+    <section class="card">
+        <h3>Şeker hastalığı belirtileri nelerdir?</h3>
+        <p>Her hastada farklı belirtilerle kendini gösterse de genel olarak şeker hastalığının belirtileri şunlardır:
+            1-İdrara çıkma sıklığının artması
+            2-Artan susuzluk ve ağız kuruluğu 
+            3-Ellerde ve ayaklarda uyuşma ve karıncalanma 
+            4-Çabalamadan kilo verme
+            5-Ayak tabanında yanma hissinin oluşması 
+            gibi bir çok belirtisi bulunur.
+        </p>
+    </section>
+  </main>
+  <main>
+    <section class="card">
+        <h4>Şeker hastalığının çeşitleri nelerdir?</h4>
+        <p>Şeker hastalığı 2 çeşittir:
+            Tip 1 Diyabet: İnsülin hormonunun mutlak eksikliğinde meydana gelir.Sebepleri net olarak bilinmemekle beraber genetik olarak aktarıldığı düşünülmektedir.Bu hastaların ömür boyu insülin tedavisi almaları gerekmektedir.
+            Tip 2 Diyabet: İnsülin hormonunun var olup kullanılamamasından kaynaklanır.İnsülin,hücreler tarafından kullanılamaz.Uzun yıllar klinik belirti göstermeyebilir.Hamilelik,enfeksiyon vb. durumlarda kendini gösterebilir.
+        </p>
+    </section>
+  </main>
+
+  <footer>
+    <h3>İletişim Formu</h3>
+    <form id="contactForm">
+      <textarea placeholder="Öneri, şikayet, teşekkür..." required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+
+    @ 2025 Ankabetik made by AnkaSoft
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menuBox = document.getElementById("menuBox");
+      if (menuBox.style.display === "none" || menuBox.style.display === "") {
+        menuBox.style.display = "block";
+      } else {
+        menuBox.style.display = "none";
+      }
+    }
+
+    function toggleAuthBox() {
+      const authBox = document.getElementById("authBox");
+      if (authBox.style.display === "none" || authBox.style.display === "") {
+        authBox.style.display = "block";
+      } else {
+        authBox.style.display = "none";
+      }
+    }
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
