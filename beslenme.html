@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beslenme - Diyabet</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Stil dosyasını ekle -->
+</head>
+<body>
+
+  <!-- Menü Butonu -->
+  <div class="menu-button" onclick="toggleMenu()">☰</div>
+
+  <!-- Menü -->
+  <div class="menu" id="menu" style="display: none;">
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="ilaclar.html">İlaçlar</a></li>
+      <li><a href="beslenme.html">Beslenme</a></li>
+      <li><a href="motivasyon.html">Motivasyon</a></li>
+      <li><a href="topluluk.html">Topluluk</a></li>
+      <li><a href="bakim.html">Kişisel Bakım</a></li>
+    </ul>
+  </div>
+
+  <!-- Beslenme İçeriği -->
+  <section class="nutrition-section">
+    <h1>Diyabet Hastaları İçin Beslenme</h1>
+    <p>Diyabet hastalarının beslenme düzeni, kan şekeri seviyelerinin düzenlenmesinde çok önemli bir rol oynar. İşte Tip 1 ve Tip 2 diyabet için öneriler:</p>
+
+    <!-- Tip 1 Diyabet Beslenme -->
+    <div class="box">
+      <h2>Tip 1 Diyabet Beslenme</h2>
+      <p>Tip 1 diyabet, vücudun insülin üretmemesiyle ilişkili olduğu için bu hastalar düzenli insülin almalıdır. Ancak doğru beslenme ile kan şekeri seviyeleri daha dengeli hale getirilebilir.</p>
+      <ul>
+        <li><strong>Karbonhidratlar:</strong> Karbonhidratların miktarı ve türü kontrol edilmelidir. Tam tahıllar, baklagiller ve sebzeler tercih edilmelidir.</li>
+        <li><strong>Proteinler:</strong> Haftada en az 2-3 porsiyon yağsız et, balık ve süt ürünleri önerilir.</li>
+        <li><strong>Yağlar:</strong> Omega-3 yağ asitlerinden zengin balıklar, zeytinyağı ve avokado gibi sağlıklı yağlar tercih edilmelidir.</li>
+        <li><strong>Yüksek lifli gıdalar:</strong> Yüksek lif içeren gıdalar sindirimi yavaşlatır ve kan şekeri düzeylerini dengeler.</li>
+      </ul>
+    </div>
+
+    <!-- Tip 2 Diyabet Beslenme -->
+    <div class="box">
+      <h2>Tip 2 Diyabet Beslenme</h2>
+      <p>Tip 2 diyabet, vücudun insüline karşı direnç göstermesiyle ilişkilidir. Bu hastalar için beslenme düzeni, insülin duyarlılığını artırmaya ve kan şekeri seviyelerini dengelemeye yardımcı olmalıdır.</p>
+      <ul>
+        <li><strong>Düşük glisemik indeksli gıdalar:</strong> Tam tahıllar, meyve ve sebzeler gibi düşük glisemik indeksli gıdalar tercih edilmelidir.</li>
+        <li><strong>Sağlıklı yağlar:</strong> Zeytinyağı, fındık, ceviz gibi sağlıklı yağlar tüketilmelidir.</li>
+        <li><strong>Proteinler:</strong> Yağsız protein kaynakları (tavuk, balık, yumurta, baklagiller) dengeli bir şekilde tüketilmelidir.</li>
+        <li><strong>Ağırlıklı sebze ve meyve:</strong> Lif açısından zengin sebze ve meyveler kan şekeri seviyelerini stabil tutmaya yardımcı olur.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Menü Açma/Kapama Fonksiyonu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    }
+  </script>
+   <footer>
+    @ 2025 Ankabetik made by AnkaSoft
+    </footer>
+
+</body>
+</html>
+

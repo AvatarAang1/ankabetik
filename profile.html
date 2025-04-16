@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Oluştur – Ankabetik</title>
+  <!-- styles.css kesin aynı klasörde olmalı -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Menü Butonu -->
+  <button class="menu-button" onclick="toggleMenu()">☰</button>
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="ilaclar.html">İlaçlar</a></li>
+      <li><a href="beslenme.html">Beslenme</a></li>
+      <li><a href="motivasyon.html">Motivasyon</a></li>
+      <li><a href="topluluk.html">Topluluk</a></li>
+      <li><a href="bakim.html">Kişisel Bakım</a></li>
+      <li><a href="profile.html">Profil</a></li>
+    </ul>
+  </div>
+
+  <!-- Profil Bölümü -->
+  <section class="profile-section">
+    <!-- İşte kutucuk: .box sınıfı -->
+    <div class="box">
+      <h1>👤 Profil Oluştur</h1>
+      <form id="profileForm">
+        <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+        <textarea id="bio" placeholder="Kısa biyografi..." rows="4"></textarea>
+        <label for="avatar">Profil Fotoğrafı:</label>
+        <input type="file" id="avatar" accept="image/*">
+        <button type="submit">Kaydet</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+
+    // Profil formu gönderildiğinde
+    document.getElementById('profileForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Profiliniz kaydedildi! 🎉');
+      this.reset(); // Formu sıfırlama
+    });
+  </script>
+
+  <footer>
+    &copy; 2025 Ankabetik, made by AnkaSoft
+  </footer>
+
+</body>
+</html>
+

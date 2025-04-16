@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kişisel Bakım - Diyabet</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Stil dosyasını ekle -->
+</head>
+<body>
+
+  <!-- Menü Butonu -->
+  <div class="menu-button" onclick="toggleMenu()">☰</div>
+
+  <!-- Menü -->
+  <div class="menu" id="menu" style="display: none;">
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="ilaclar.html">İlaçlar</a></li>
+      <li><a href="beslenme.html">Beslenme</a></li>
+      <li><a href="motivasyon.html">Motivasyon</a></li>
+      <li><a href="topluluk.html">Topluluk</a></li>
+      <li><a href="bakim.html">Kişisel Bakım</a></li>
+    </ul>
+  </div>
+
+  <!-- Kişisel Bakım İçeriği -->
+  <section class="bakim-section">
+    <h1>Diyabet Hastaları İçin Kişisel Bakım</h1>
+    <p>Diyabet hastaları için kişisel bakım, kan şekeri düzeylerini dengede tutmak, sağlıklı bir yaşam sürdürmek ve komplikasyonları önlemek için oldukça önemlidir. İşte bazı temel bakım adımları:</p>
+
+    <!-- Ayak Bakımı -->
+    <div class="box">
+      <h2>Ayak Bakımı</h2>
+      <p>Diyabet hastalarında ayak bakımı, ayaklarda hissizlik veya yara oluşumu riski nedeniyle çok önemlidir. Aşağıdaki adımlar dikkatlice uygulanmalıdır:</p>
+      <ul>
+        <li>Ayaklar her gün temizlenmeli ve kurutulmalıdır.</li>
+        <li>Ayak parmak araları nemli bırakılmamalıdır.</li>
+        <li>Yaralar veya kesikler hemen tedavi edilmeli ve izlenmelidir.</li>
+        <li>Dar ve rahatsız edici ayakkabılardan kaçınılmalıdır.</li>
+      </ul>
+    </div>
+
+    <!-- Cilt Bakımı -->
+    <div class="box">
+      <h2>Cilt Bakımı</h2>
+      <p>Diyabet, ciltte kuruluk, kaşıntı ve enfeksiyon riskini artırabilir. Cilt bakımı şu şekilde yapılmalıdır:</p>
+      <ul>
+        <li>Cilt nemlendirici krem ve losyonlar kullanmak cildi nemli tutar.</li>
+        <li>Cildin kurumasını önlemek için aşırı sıcak suyla duş almak yerine ılık su kullanılmalıdır.</li>
+        <li>Ciltte oluşabilecek enfeksiyonlar için düzenli olarak doktor kontrolü yapılmalıdır.</li>
+      </ul>
+    </div>
+
+    <!-- Göz Bakımı -->
+    <div class="box">
+      <h2>Göz Bakımı</h2>
+      <p>Diyabet göz sağlığını etkileyebilir. Düzenli göz muayeneleri ve dikkatli bakım önemlidir:</p>
+      <ul>
+        <li>Her yıl göz muayenesi yapılmalıdır.</li>
+        <li>Görme kaybı belirtileri (bulanık görme) fark edildiğinde hemen doktora başvurulmalıdır.</li>
+        <li>Gözleri korumak için güneş ışığından korunmalı ve uygun gözlükler kullanılmalıdır.</li>
+      </ul>
+    </div>
+
+    <!-- Diğer Öneriler -->
+    <div class="box">
+      <h2>Diğer Öneriler</h2>
+      <ul>
+        <li><strong>Düzenli Egzersiz:</strong> Haftada en az 150 dakika orta düzeyde egzersiz yapmak, kan şekeri seviyelerini dengelemeye yardımcı olur.</li>
+        <li><strong>Stres Yönetimi:</strong> Yoga, meditasyon gibi stres azaltıcı teknikler kan şekeri seviyelerini dengelemeye yardımcı olabilir.</li>
+        <li><strong>Sağlıklı Uyku Düzeni:</strong> Yeterli uyku, diyabeti yönetmek için oldukça önemlidir. Uykusuzluk kan şekeri seviyelerinde dalgalanmalara neden olabilir.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Menü Açma/Kapama Fonksiyonu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    }
+  </script>
+ <footer>
+    @ 2025 Ankabetik made by AnkaSoft
+    </footer>
+</body>
+</html>

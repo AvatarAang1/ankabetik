@@ -1,0 +1,277 @@
+/* Genel Stil */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Pastel arka plan */
+    color: #444;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3b8d99;
+  }
+  
+  a:hover {
+    color: #2a6b7b;
+  }
+  
+  /* Menü */
+  .menu-button {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #6ab1d7;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 20px;
+    z-index:1000;
+    width: 200%;
+    display: none;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  .menu li a {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .menu li a:hover {
+    color: #6ab1d7;
+  }
+  
+  /* Kutular */
+  .ilaclar-section, .beslenme-section, .motivasyon-section, .topluluk-section, .bakim-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+  }
+  
+  .ilac-box, .beslenme-box, .motivasyon-box, .topluluk-box, .bakim-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #e0e0e0;
+    text-align: left;
+  }
+  
+  .ilac-box:hover, .beslenme-box:hover, .motivasyon-box:hover, .topluluk-box:hover, .bakim-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ilac-box h2, .beslenme-box h2, .motivasyon-box h2, .topluluk-box h2, .bakim-box h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .ilac-box p, .beslenme-box p, .motivasyon-box p, .topluluk-box p, .bakim-box p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .ilac-box strong, .beslenme-box strong, .motivasyon-box strong, .topluluk-box strong, .bakim-box strong {
+    color: #3b8d99;
+  }
+  
+  /* Arka Plan Renkleri */
+  body {
+    background-color: #f3f9fb; /* Soluk pastel mavi */
+  }
+  
+  .ilac-box {
+    background-color: #fef7f5; /* Hafif şeftali tonu */
+  }
+  
+  .beslenme-box {
+    background-color: #f9f6f7; /* Soluk pembe */
+  }
+  
+  .motivasyon-box {
+    background-color: #f6f7fe; /* Lavanta rengi */
+  }
+  
+  .topluluk-box {
+    background-color: #f3f7fc; /* Hafif mavi */
+  }
+  
+  .bakim-box {
+    background-color: #f7f6fc; /* Pastel mor */
+  }
+  
+  /* Menü Açma/Kapama */
+  @media screen and (max-width: 600px) {
+    .menu-button {
+      font-size: 25px;
+    }
+  
+    .menu {
+      padding: 15px;
+      font-size: 16px;
+    }
+  
+    .ilac-box, .beslenme-box, .motivasyon-box, .topluluk-box, .bakim-box {
+      width: 100%;
+    }
+  }
+  /* Genel Arka Plan ve Yazı Renkleri */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* Pastel tonlarında açık bir arka plan */
+    color: #333; /* Yazı rengi */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Sayfa Başlıkları */
+  h1, h2, h3 {
+    font-family: 'Courier New', Courier, monospace;
+    color: #4a90e2;
+    text-align: center;
+  }
+  
+  /* Kutu Stili */
+  .box {
+    background-color: #ffffff; /* Kutunun içi beyaz */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px; /* Yumuşak köşeler */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Kutuların Renkleri */
+  .box-light {
+    background-color: #d4ebf9; /* Pastel mavi */
+  }
+  
+  .box-green {
+    background-color: #d4f8d4; /* Pastel yeşil */
+  }
+  
+  .box-pink {
+    background-color: #f8d4d4; /* Pastel pembe */
+  }
+  
+  /* Sayfada içerik kutuları */
+  .content-box {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px auto;
+    width: 85%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sayfa Arka Planı */
+  .page {
+    background-color: #f0f8ff; /* Sayfa için pastel mavi */
+    padding: 20px;
+  }
+  
+  /* Menü Butonu ve Menü */
+  .menu-button {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #6ab1d7;
+    color: white;
+    border: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  /* Menü İçeriği */
+  .menu {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu.active {
+    display: block;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  .menu li a {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .menu li a:hover {
+    color: #6ab1d7;
+  }
+  /* ———————————————— */
+/* GENEL KUTU STİLİ */
+/* ———————————————— */
+/* ———————————————————— */
+/* GENEL KUTU STİLİ (Pastel İç Arka Plan) */
+/* ———————————————————— */
+.box {
+    background-color: #76acc4;         /* Pastel lavanta */
+    border: 1px solid #6b5c9d;         /* Bir ton koyu lavanta kenarlık */
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  

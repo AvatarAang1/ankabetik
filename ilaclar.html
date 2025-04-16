@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İlaçlar - Diyabet</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Stil dosyasını ekle -->
+</head>
+<body>
+
+  <!-- Menü Butonu -->
+  <div class="menu-button" onclick="toggleMenu()">☰</div>
+
+  <!-- Menü -->
+  <div class="menu" id="menu" style="display: none;">
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="ilaclar.html">İlaçlar</a></li>
+      <li><a href="beslenme.html">Beslenme</a></li>
+      <li><a href="motivasyon.html">Motivasyon</a></li>
+      <li><a href="topluluk.html">Topluluk</a></li>
+      <li><a href="bakim.html">Kişisel Bakım</a></li>
+    </ul>
+  </div>
+
+  <!-- İlaçlar Sayfası İçeriği -->
+  <section class="ilaclar-section">
+    <h1>İlaçlar: Diyabet Tedavisinde Kullanılan İlaçlar</h1>
+
+    <!-- İlaç 1: Metformin -->
+    <div class="box">
+      <h2>Metformin</h2>
+      <p><strong>Kullanım Aşaması:</strong> Tip 2 diyabet tedavisinde kullanılır, insülinin etkisini artırarak kan şekerini düşürür.</p>
+      <p><strong>Yan Etkiler:</strong> Mide bulantısı, ishal, karın ağrısı. Nadir olarak laktik asidoz gelişebilir.</p>
+      <p><strong>Kimler Kullanabilir:</strong> Tip 2 diyabet hastaları. Böbrek fonksiyonları normal olanlar tercih edilir.</p>
+      <p><strong>Etkisi:</strong> Kan şekerini dengeleyerek diyabetin kontrol altında tutulmasına yardımcı olur.</p>
+    </div>
+
+    <!-- İlaç 2: İnsülin -->
+    <div class="box">
+      <h2>İnsülin</h2>
+      <p><strong>Kullanım Aşaması:</strong> Tip 1 diyabetin temel tedavisidir. Ayrıca, Tip 2 diyabet hastalarında da kullanılır.</p>
+      <p><strong>Yan Etkiler:</strong> Hipoglisemi (kan şekerinin düşmesi), enjeksiyon bölgesinde ağrı, şişlik.</p>
+      <p><strong>Kimler Kullanabilir:</strong> Tip 1 diyabet hastaları ve Tip 2 diyabet hastalarının insülin tedavisi gerektiren durumlarında.</p>
+      <p><strong>Etkisi:</strong> Kan şekerinin düzenlenmesinde etkilidir. İnsülin, vücutta doğal olarak üretilen hormondur.</p>
+    </div>
+
+    <!-- İlaç 3: SGLT2 İnhibitörleri -->
+    <div class="box">
+      <h2>SGLT2 İnhibitörleri</h2>
+      <p><strong>Kullanım Aşaması:</strong> Tip 2 diyabet tedavisinde kan şekerini düşürmek için kullanılır. Böbrek hastalığı olan diyabet hastalarında da kullanılır.</p>
+      <p><strong>Yan Etkiler:</strong> İdrar yolu enfeksiyonları, yüksek potasyum, düşük kan basıncı.</p>
+      <p><strong>Kimler Kullanabilir:</strong> Tip 2 diyabet hastaları, böbrek fonksiyonları normal olanlar.</p>
+      <p><strong>Etkisi:</strong> Kan şekerinin böbrekler aracılığıyla atılmasını sağlar, kalp ve böbrek sağlığını iyileştirir.</p>
+    </div>
+
+    <!-- İlaç 4: GLP-1 Agonistleri -->
+    <div class="box">
+      <h2>GLP-1 Agonistleri</h2>
+      <p><strong>Kullanım Aşaması:</strong> Tip 2 diyabet tedavisinde insülin salgısını artırmak için kullanılır. Ayrıca iştahı baskılar.</p>
+      <p><strong>Yan Etkiler:</strong> Mide bulantısı, kusma, ishal, baş ağrısı.</p>
+      <p><strong>Kimler Kullanabilir:</strong> Tip 2 diyabet hastaları, özellikle obeziteyi de olanlar.</p>
+      <p><strong>Etkisi:</strong> Kan şekerini düşürür, kilo kaybına yardımcı olabilir ve kardiyovasküler sağlık üzerinde faydalıdır.</p>
+    </div>
+
+  </section>
+
+  <!-- Menü Açma/Kapama Fonksiyonu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    }
+  </script>
+ <footer>
+    @ 2025 Ankabetik made by AnkaSoft
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivasyon - Diyabet</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Stil dosyasını ekle -->
+</head>
+<body>
+
+  <!-- Menü Butonu -->
+  <div class="menu-button" onclick="toggleMenu()">☰</div>
+
+  <!-- Menü -->
+  <div class="menu" id="menu" style="display: none;">
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="ilaclar.html">İlaçlar</a></li>
+      <li><a href="beslenme.html">Beslenme</a></li>
+      <li><a href="motivasyon.html">Motivasyon</a></li>
+      <li><a href="topluluk.html">Topluluk</a></li>
+      <li><a href="bakim.html">Kişisel Bakım</a></li>
+    </ul>
+  </div>
+
+  <!-- Motivasyon İçeriği -->
+  <section class="motivasyon-section">
+    <h1>Motivasyon: Diyabetle Mücadeleye Güç Kat!</h1>
+
+    <!-- Örnek Motivasyon Cümleleri -->
+    <div class="box">
+      <p>"Her gün bir adım daha atarak, sağlıklı bir geleceğe doğru ilerliyorsun. Unutma, küçük adımlar büyük değişimler yaratır."</p>
+    </div>
+    <div class="box">
+      <p>"Zorluklarla karşılaştığında, hatırlat kendine; her zorluk bir fırsattır ve sen her şeyin üstesinden gelebilecek güçtesin!"</p>
+    </div>
+    <div class="box">
+      <p>"Hayatını sen yönetiyorsun, her yeni gün, sana yeni umutlar ve fırsatlar getirir. Hedeflerine ulaşman çok yakın!"</p>
+    </div>
+    <div class="box">
+      <p>"Bugün yapacakların, seni yarına daha güçlü taşıyacak. Her şey senin elinde!"</p>
+    </div>
+
+    <!-- Kullanıcıların Motivasyon Yazabileceği Alan -->
+    <div class="user-motivasyon">
+      <h2>Kendi Motivasyonunu Paylaş!</h2>
+      <textarea id="user-motivasyon" placeholder="Buraya kendi motivasyon cümleni yaz..."></textarea>
+      <button onclick="addMotivasyon()">Paylaş</button>
+    </div>
+
+    <!-- Kullanıcı tarafından eklenen motivasyonlar (Dinamik olarak eklenecek) -->
+    <h2>Topluluk Motivasyonları</h2>
+    <div id="motivation-container">
+      <!-- Kullanıcı motivasyonları burada görünecek -->
+    </div>
+  </section>
+
+  <!-- Menü Açma/Kapama Fonksiyonu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    }
+
+    // Kullanıcı motivasyonlarını eklemek için fonksiyon
+    function addMotivasyon() {
+      const userText = document.getElementById('user-motivasyon').value;
+      if (userText) {
+        const newMotivation = document.createElement('div');
+        newMotivation.classList.add('motivasyon-box');
+        newMotivation.textContent = userText;
+        document.getElementById('motivation-container').appendChild(newMotivation);
+        document.getElementById('user-motivasyon').value = ''; // Yazı alanını temizle
+      } else {
+        alert("Lütfen bir motivasyon mesajı yazın!");
+      }
+    }
+  </script>
+  <footer>
+    @ 2025 Ankabetik made by AnkaSoft
+    </footer>
+
+</body>
+</html>

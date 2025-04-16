@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topluluk - Diyabet</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Stil dosyasını ekle -->
+</head>
+<body>
+
+  <!-- Menü Butonu -->
+  <div class="menu-button" onclick="toggleMenu()">☰</div>
+
+  <!-- Menü -->
+  <div class="menu" id="menu" style="display: none;">
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="ilaclar.html">İlaçlar</a></li>
+      <li><a href="beslenme.html">Beslenme</a></li>
+      <li><a href="motivasyon.html">Motivasyon</a></li>
+      <li><a href="topluluk.html">Topluluk</a></li>
+      <li><a href="bakim.html">Kişisel Bakım</a></li>
+    </ul>
+  </div>
+
+  <!-- Topluluk Sayfası İçeriği -->
+  <section class="topluluk-section">
+    <h1>Topluluk: Birlikte Güçlüyüz!</h1>
+
+    <!-- Kullanıcı Gönderisi Paylaşma Alanı -->
+      <!-- Kullanıcı Gönderisi Paylaşma Alanı -->
+  <div class="box user-post">
+    <h2>✏️ Yeni Gönderi Oluştur</h2>
+    <textarea id="post-text" placeholder="Mesajınızı buraya yazın..." rows="4"></textarea>
+    <label for="post-image">Resim (isteğe bağlı):</label>
+    <input type="file" id="post-image" accept="image/*">
+    <button onclick="addPost()">Paylaş</button>
+  </div>
+
+
+    <!-- Paylaşımlar (Dinamik olarak eklenecek) -->
+    <h2>Topluluk Paylaşımları</h2>
+    <div id="posts-container">
+      <!-- Burada kullanıcı paylaşımları görünecek -->
+    </div>
+  </section>
+
+  <!-- Menü Açma/Kapama Fonksiyonu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    }
+
+    // Kullanıcı paylaşımını eklemek için fonksiyon
+    function addPost() {
+  const text = document.getElementById('post-text').value.trim();
+  const fileInput = document.getElementById('post-image');
+  if (!text && !fileInput.files.length) {
+    alert('Lütfen mesaj veya resim ekleyin!');
+    return;
+  }
+
+  const box = document.createElement('div');
+  box.classList.add('box', 'post-box');
+
+  // Metin
+  if (text) {
+    const p = document.createElement('p');
+    p.textContent = text;
+    box.appendChild(p);
+  }
+
+  // Resim
+  if (fileInput.files.length) {
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(fileInput.files[0]);
+    img.style.maxWidth = '100%';
+    img.style.borderRadius = '8px';
+    img.style.marginTop = '10px';
+    box.appendChild(img);
+  }
+
+  // Beğeni Butonu
+  const likeBtn = document.createElement('button');
+  likeBtn.textContent = '👍 Beğen';
+  likeBtn.classList.add('like-button');
+  likeBtn.onclick = () => alert('Beğendiğiniz için teşekkürler! ❤️');
+  box.appendChild(likeBtn);
+
+  document.getElementById('posts-container').prepend(box);
+
+  // Temizle
+  document.getElementById('post-text').value = '';
+  fileInput.value = '';
+}
+
+
+        // Paylaşımı gönderi kutusuna ekle
+        document.getElementById('posts-container').appendChild(newPost);
+
+        // Yazı alanını temizle
+        document.getElementById('user-post').value = '';
+      } else {
+        alert("Lütfen bir mesaj yazın!");
+      }
+    }
+  </script>
+ <footer>
+    @ 2025 Ankabetik made by AnkaSoft
+    </footer>
+</body>
+</html>
